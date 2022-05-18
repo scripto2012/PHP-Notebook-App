@@ -1,6 +1,6 @@
 <?php
 
-$pdo = new PDO("mysql:host=localhost; dbname=9876207546", "9876207546", "jlbytuj,ydti");
+$pdo = new PDO("mysql:host=localhost; dbname=dbname", "username", "pass");
 $statement = $pdo->prepare("SELECT * FROM blocknot");
 $statement->execute();
 $tasks = $statement->fetchall(PDO::FETCH_ASSOC);
@@ -26,7 +26,7 @@ $tasks = $statement->fetchall(PDO::FETCH_ASSOC);
                 <div class="col-md-12">
                     <div class="header col-md-12">
                         <h1>Заметки</h1>
-                        <a href="/blocknot/create.php" class="btn btn-success"><i class="fa fa-plus"></i></a>
+                        <a href="/notebook/create.php" class="btn btn-success"><i class="fa fa-plus"></i></a>
                     </div>
                     <table class="table">
                         <thead>
@@ -43,9 +43,9 @@ $tasks = $statement->fetchall(PDO::FETCH_ASSOC);
                                 <td><?= $task['id']; ?></td>
                                 <td><?= $task['title']; ?></td>
                                 <td>
-                                    <a href="/blocknot/show.php?id=<?=$task['id'];?>" class="btn btn-info"><i class="fa fa-eye"></i></a>
-                                    <a href="/blocknot/edit.php?id=<?=$task['id'];?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                                    <a href="/blocknot/delete.php?id=<?=$task['id'];?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    <a href="/notebook/show.php?id=<?=$task['id'];?>" class="btn btn-info"><i class="fa fa-eye"></i></a>
+                                    <a href="/notebook/edit.php?id=<?=$task['id'];?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                                    <a href="/notebook/delete.php?id=<?=$task['id'];?>" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             <?php endforeach;?>

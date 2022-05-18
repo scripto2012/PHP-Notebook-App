@@ -7,7 +7,7 @@ $data = [
     ];
 
 //Подключение
-$pdo = new PDO("mysql:host=localhost; dbname=9876207546", "9876207546", "jlbytuj,ydti");
+$pdo = new PDO("mysql:host=localhost; dbname=dbname", "username", "pass");
 
 $sql = "UPDATE blocknot SET title=:title, content=:content WHERE id=:id";
 $statement = $pdo->prepare($sql);
@@ -18,7 +18,7 @@ $statement->bindParam(":id", $_POST['id']);
 $statement->bindParam(":title", $_POST['title']);
 $statement->bindParam(":content", $_POST['content']);
 */
-header("Location: /blocknot"); 
+header("Location: /notebook");
 
 
 

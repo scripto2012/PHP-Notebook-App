@@ -1,7 +1,7 @@
 <?
 
 //Подключение
-$pdo = new PDO("mysql:host=localhost; dbname=9876207546", "9876207546", "jlbytuj,ydti");
+$pdo = new PDO("mysql:host=localhost; dbname=dbname", "username", "pass");
 
 //Запись запроса
 $sql = "INSERT INTO blocknot (title, content) VALUES (:title, :content)";
@@ -16,6 +16,6 @@ $statement = $pdo->prepare($sql);
 //Выполнение запроса с передачей массива $_POST
 $statement->execute($_POST);
 
-header("Location: /blocknot"); exit;
+header("Location: /notebook"); exit;
 
 ?>

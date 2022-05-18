@@ -25,7 +25,7 @@ $task = $statement->fetch(PDO::FETCH_ASSOC);
         <h1><?= $task['title']; ?></h1>
         <p><?= $task['content']; ?></p>
    
-      <button class="btn"><a href="/blocknot/">Вернуться назад</a></button>
+      <button class="btn"><a href="/notebook/">Вернуться назад</a></button>
     </div>
   </div>
 </div>
